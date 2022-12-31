@@ -72,6 +72,7 @@ class Character extends FlxSprite
 	public var cameraPosition:Array<Float> = [0, 0];
 
 	public var hasMissAnimations:Bool = false;
+	public var linked:Character = null;
 
 	//Used on Character Editor
 	public var imageFile:String = '';

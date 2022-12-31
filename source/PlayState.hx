@@ -552,6 +552,11 @@ class PlayState extends MusicBeatState
 		}
 		if (SONG.player2.endsWith('-flash')) {
 			dad = new FlashCharacter(0,0,SONG.player2);
+			var linkedDad = new Character(0, 0, SONG.player2.split('-flash')[0]);
+			startCharacterPos(linkedDad, true);
+			dadGroup.add(linkedDad);
+			startCharacterLua(linkedDad.curCharacter);
+			dad.linked = linkedDad;
 		}
 		else {
 			dad = new Character(0, 0, SONG.player2);
@@ -562,6 +567,11 @@ class PlayState extends MusicBeatState
 
 		if (SONG.player1.endsWith('-flash')) {
 			boyfriend = new FlashBoyfriend(0, 0, SONG.player1);
+			var linked = new Boyfriend(0, 0, SONG.player1.split('-flash')[0]);
+			startCharacterPos(linked);
+			boyfriendGroup.add(linked);
+			startCharacterLua(linked.curCharacter);
+			boyfriend.linked = linked;
 		}
 		else {
 			boyfriend = new Boyfriend(0, 0, SONG.player1);

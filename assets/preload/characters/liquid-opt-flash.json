@@ -219,6 +219,26 @@
 		}
 	],
 	"specialframes": [],
+	"extAnims": [
+		"idle",
+		"singLEFT",
+		"singDOWN",
+		"singUP",
+		"singRIGHT",
+		"singLEFTmiss",
+		"singDOWNmiss",
+		"singUPmiss",
+		"singRIGHTmiss",
+		"idle-alt",
+		"singLEFT-alt",
+		"singDOWN-alt",
+		"singUP-alt",
+		"singRIGHT-alt",
+		"singDOWNmiss-alt",
+		"singUPmiss-alt",
+		"singRIGHTmiss-alt",
+		"singLEFTmiss-alt"
+	],
 	"no_antialiasing": false,
 	"swf": "liquidOPT",
 	"position": [

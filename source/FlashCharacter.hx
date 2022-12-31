@@ -43,6 +43,7 @@ typedef FlashCharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var healthbar_colors:Array<Int>;
+	var extAnims:Array<String>;
 }
 
 typedef SpecialFrames = {
@@ -71,6 +72,7 @@ class FlashCharacter extends Character
 
 	public var flAnimationsArray:Array<FlashAnimArray> = [];
 	public var endFrames:Array<Int> = [];
+	public var externalAnims:Array<String>;
 
 	public var json:FlashCharacterFile;
 	public var anims:Map<String,Array<Dynamic>>;
@@ -116,16 +118,14 @@ class FlashCharacter extends Character
 
 		flAnimationsArray = json.animations;
 		anims = new Map<String,Array<Dynamic>>();
+		externalAnims = json.extAnims;
+		if (json.extAnims.contains('singLEFTmiss')) { hasMissAnimations = true; }
 
 		if(flAnimationsArray != null && flAnimationsArray.length > 0) {
 			for (anim in flAnimationsArray) {
 				var animLabel:String = '' + anim.label;
 				var animName:String = '' + anim.anim;
 				var animLoop:Bool = !!anim.loop; //Bruh
-
-				if ( animName == 'singLEFTmiss' || animName == 'singDOWNmiss' || animName == 'singUPmiss' || animName == 'singRIGHTmiss' ) {
-					hasMissAnimations = true;
-				}
 				
 				endFrames.push(anim.endFrame);
 
@@ -160,6 +160,10 @@ class FlashCharacter extends Character
 
 		originalFlipX = flipX;
 		if (isPlayer) { flipX = !flipX; }
+
+		if (json.extAnims.contains('idle')) {
+			this.alpha = 0.00001;
+		}
 
 		recalculateDanceIdle();
 		if (anims.exists('idle')) {
@@ -251,6 +255,12 @@ class FlashCharacter extends Character
 				playAnim(currentAnim + '-loop');
 			}
 		}
+
+		if (linked != null) { 
+			linked.holdTimer = holdTimer;
+			linked.heyTimer = heyTimer;
+		}
+
 		if (allowUpdate) { 
 			if (clip.currentFrame >= currentEndFrame && clip.isPlaying) {
 				if (currentLoops) { clip.gotoAndPlay(currentAnim); }
@@ -285,6 +295,26 @@ class FlashCharacter extends Character
 
 	public override function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0)
 	{
+		if (json.extAnims.contains(AnimName)) {
+			if (linked != null) {
+				linked.alpha = 1.0;
+				if (clip.isPlaying) {clip.stop();}
+				flAnim = AnimName;
+				currentAnim = AnimName;
+				this.alpha = 0.00001;
+				allowUpdate = false;
+				linked.playAnim(AnimName,Force,Reversed,Frame);
+			}
+			return;
+		}
+		else {
+			if (linked != null) {
+				linked.alpha = 0.00001;
+				allowUpdate = true;
+				this.alpha = 1.0;
+				linked.animation.stop();
+			}
+		}
 		var toplay:String = anims[AnimName][0];
 		if (!Force && (flAnim == toplay)) {
 			return;
