@@ -1,5 +1,6 @@
 package;
 
+import flixel.animation.FlxAnimation;
 import animateatlas.AtlasFrameMaker;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -50,6 +51,7 @@ class Character extends FlxSprite
 	public var debugMode:Bool = false;
 
 	public var isPlayer:Bool = false;
+	public var startedDeath:Bool = false;
 	public var curCharacter:String = DEFAULT_CHARACTER;
 
 	public var colorTween:FlxTween;
@@ -78,10 +80,20 @@ class Character extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
+	public var curAnim(get, set):Dynamic;
+	public var doUpdate:Bool = true;
+
+	public var curAnimName(get, set):Null<String>;
+
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
+
+		if (character == '!!!SKIP') {
+			doUpdate = false;
+			return;
+		}
 
 		#if (haxe >= "4.0.0")
 		animOffsets = new Map();
@@ -91,6 +103,7 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
+		
 		var library:String = null;
 		switch (curCharacter)
 		{
@@ -212,7 +225,6 @@ class Character extends FlxSprite
 				} else {
 					quickAnimAdd('idle', 'BF idle dance');
 				}
-				//trace('Loaded file to character ' + curCharacter);
 		}
 		originalFlipX = flipX;
 
@@ -223,91 +235,66 @@ class Character extends FlxSprite
 		if (isPlayer)
 		{
 			flipX = !flipX;
-
-			/*// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf'))
-			{
-				// var animArray
-				if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
-				{
-					var oldRight = animation.getByName('singRIGHT').frames;
-					animation.getByName('singRIGHT').frames = animation.getByName('singLEFT').frames;
-					animation.getByName('singLEFT').frames = oldRight;
-				}
-
-				// IF THEY HAVE MISS ANIMATIONS??
-				if (animation.getByName('singLEFTmiss') != null && animation.getByName('singRIGHTmiss') != null)
-				{
-					var oldMiss = animation.getByName('singRIGHTmiss').frames;
-					animation.getByName('singRIGHTmiss').frames = animation.getByName('singLEFTmiss').frames;
-					animation.getByName('singLEFTmiss').frames = oldMiss;
-				}
-			}*/
-		}
-
-		switch(curCharacter)
-		{
-			case 'pico-speaker':
-				skipDance = true;
-				loadMappedAnims();
-				playAnim("shoot1");
 		}
 	}
 
 	override function update(elapsed:Float)
 	{
-		if(!debugMode && animation.curAnim != null)
+		if (doUpdate)
 		{
-			if(heyTimer > 0)
+			if(!debugMode && animation.curAnim != null)
 			{
-				heyTimer -= elapsed * PlayState.instance.playbackRate;
-				if(heyTimer <= 0)
+				if(heyTimer > 0)
 				{
-					if(specialAnim && animation.curAnim.name == 'hey' || animation.curAnim.name == 'cheer')
+					heyTimer -= elapsed * PlayState.instance.playbackRate;
+					if(heyTimer <= 0)
 					{
-						specialAnim = false;
-						dance();
+						if(specialAnim && animation.curAnim.name == 'hey' || animation.curAnim.name == 'cheer')
+						{
+							specialAnim = false;
+							dance();
+						}
+						heyTimer = 0;
 					}
-					heyTimer = 0;
-				}
-			} else if(specialAnim && animation.curAnim.finished)
-			{
-				specialAnim = false;
-				dance();
-			}
-			
-			switch(curCharacter)
-			{
-				case 'pico-speaker':
-					if(animationNotes.length > 0 && Conductor.songPosition > animationNotes[0][0])
-					{
-						var noteData:Int = 1;
-						if(animationNotes[0][1] > 2) noteData = 3;
-
-						noteData += FlxG.random.int(0, 1);
-						playAnim('shoot' + noteData, true);
-						animationNotes.shift();
-					}
-					if(animation.curAnim.finished) playAnim(animation.curAnim.name, false, false, animation.curAnim.frames.length - 3);
-			}
-
-			if (!isPlayer)
-			{
-				if (animation.curAnim.name.startsWith('sing'))
+				} else if(specialAnim && animation.curAnim.finished)
 				{
-					holdTimer += elapsed;
-				}
-
-				if (holdTimer >= Conductor.stepCrochet * (0.0011 / (FlxG.sound.music != null ? FlxG.sound.music.pitch : 1)) * singDuration)
-				{
+					specialAnim = false;
 					dance();
-					holdTimer = 0;
 				}
-			}
+				
+				switch(curCharacter)
+				{
+					case 'pico-speaker':
+						if(animationNotes.length > 0 && Conductor.songPosition > animationNotes[0][0])
+						{
+							var noteData:Int = 1;
+							if(animationNotes[0][1] > 2) noteData = 3;
 
-			if(animation.curAnim.finished && animation.getByName(animation.curAnim.name + '-loop') != null)
-			{
-				playAnim(animation.curAnim.name + '-loop');
+							noteData += FlxG.random.int(0, 1);
+							playAnim('shoot' + noteData, true);
+							animationNotes.shift();
+						}
+						if(animation.curAnim.finished) playAnim(animation.curAnim.name, false, false, animation.curAnim.frames.length - 3);
+				}
+
+				if (!isPlayer)
+				{
+					if (animation.curAnim.name.startsWith('sing'))
+					{
+						holdTimer += elapsed;
+					}
+
+					if (holdTimer >= Conductor.stepCrochet * (0.0011 / (FlxG.sound.music != null ? FlxG.sound.music.pitch : 1)) * singDuration)
+					{
+						dance();
+						holdTimer = 0;
+					}
+				}
+
+				if(animation.curAnim.finished && animation.getByName(animation.curAnim.name + '-loop') != null)
+				{
+					playAnim(animation.curAnim.name + '-loop');
+				}
 			}
 		}
 		super.update(elapsed);
@@ -416,5 +403,25 @@ class Character extends FlxSprite
 	public function quickAnimAdd(name:String, anim:String)
 	{
 		animation.addByPrefix(name, anim, 24, false);
+	}
+
+	function get_curAnim():Dynamic
+	{
+		return animation.curAnim;
+	}
+	
+	function set_curAnim(an:FlxAnimation):Dynamic
+	{
+		return animation.curAnim = an;
+	}
+
+	function get_curAnimName():Null<String>
+	{
+		return animation.curAnim.name;
+	}
+		
+	function set_curAnimName(an:String):Null<String>
+	{
+		return animation.curAnim.name = an;
 	}
 }

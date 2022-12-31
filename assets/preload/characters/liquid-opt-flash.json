@@ -1,0 +1,245 @@
+{
+	"animations": [
+		{
+			"offsets": [],
+			"anim": "idle",
+			"loop": false,
+			"endFrame": 14,
+			"label": "idle"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFT",
+			"loop": false,
+			"endFrame": 25,
+			"label": "singLEFT"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWN",
+			"loop": false,
+			"endFrame": 38,
+			"label": "singDOWN"
+		},
+		{
+			"offsets": [],
+			"anim": "singUP",
+			"loop": false,
+			"endFrame": 49,
+			"label": "singUP"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHT",
+			"loop": false,
+			"endFrame": 63,
+			"label": "singRIGHT"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"endFrame": 73,
+			"label": "singLEFTmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"endFrame": 81,
+			"label": "singDOWNmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singUPmiss",
+			"loop": false,
+			"endFrame": 91,
+			"label": "singUPmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"endFrame": 105,
+			"label": "singRIGHTmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "hey",
+			"loop": false,
+			"endFrame": 121,
+			"label": "hey"
+		},
+		{
+			"offsets": [],
+			"anim": "PEACE",
+			"loop": false,
+			"endFrame": 139,
+			"label": "PEACE"
+		},
+		{
+			"offsets": [],
+			"anim": "sigh",
+			"loop": false,
+			"endFrame": 165,
+			"label": "sigh"
+		},
+		{
+			"offsets": [],
+			"anim": "bastard",
+			"loop": false,
+			"endFrame": 204,
+			"label": "bastard"
+		},
+		{
+			"offsets": [],
+			"anim": "hmm",
+			"loop": false,
+			"endFrame": 212,
+			"label": "hmm"
+		},
+		{
+			"offsets": [],
+			"anim": "hurt",
+			"loop": false,
+			"endFrame": 256,
+			"label": "hurt"
+		},
+		{
+			"offsets": [],
+			"anim": "idle-alt",
+			"loop": false,
+			"endFrame": 270,
+			"label": "idle-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"endFrame": 280,
+			"label": "singLEFT-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"endFrame": 292,
+			"label": "singDOWN-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singUP-alt",
+			"loop": false,
+			"endFrame": 303,
+			"label": "singUP-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"endFrame": 317,
+			"label": "singRIGHT-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFTmiss-alt",
+			"loop": false,
+			"endFrame": 329,
+			"label": "singLEFTmiss-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWNmiss-alt",
+			"loop": false,
+			"endFrame": 341,
+			"label": "singDOWNmiss-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singUPmiss-alt",
+			"loop": false,
+			"endFrame": 356,
+			"label": "singUPmiss-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHTmiss-alt",
+			"loop": false,
+			"endFrame": 370,
+			"label": "singRIGHTmiss-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "hey-alt",
+			"loop": false,
+			"endFrame": 398,
+			"label": "hey-alt"
+		},
+		{
+			"offsets": [],
+			"anim": "postSolo",
+			"loop": false,
+			"endFrame": 416,
+			"label": "postSolo"
+		},
+		{
+			"offsets": [],
+			"anim": "shocked",
+			"loop": false,
+			"endFrame": 487,
+			"label": "shocked"
+		},
+		{
+			"offsets": [],
+			"anim": "transition",
+			"loop": false,
+			"endFrame": 520,
+			"label": "transition"
+		},
+		{
+			"offsets": [],
+			"anim": "postSolo-remix",
+			"loop": false,
+			"endFrame": 561,
+			"label": "postSolo-remix"
+		},
+		{
+			"offsets": [],
+			"anim": "transition-remix",
+			"loop": false,
+			"endFrame": 640,
+			"label": "transition-remix"
+		},
+		{
+			"offsets": [],
+			"anim": "cool",
+			"loop": false,
+			"endFrame": 642,
+			"label": "cool"
+		}
+	],
+	"specialframes": [],
+	"no_antialiasing": false,
+	"swf": "liquidOPT",
+	"position": [
+		-50,
+		-50
+	],
+	"dimensions": [
+		1050,
+		1000
+	],
+	"healthicon": "liquid",
+	"flip_x": false,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -75,6 +75,8 @@
 		<!-- <library name="week2"         preload="false" /> -->
 	</section>
 	
+	
+	
 	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
@@ -105,6 +107,7 @@
 	<define name="hscriptPos" />
 
 	<!--In case you want to use the ui package-->
+	<haxelib name="swf" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
 	<haxelib name="hxCodec" if="VIDEOS_ALLOWED"/>
@@ -118,6 +121,12 @@
 
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
+	
+	<library path="assets/keving.swf" preload="true" />
+	<library path="assets/liquid.swf" preload="true" />
+	<library path="assets/liquidOPT.swf" preload="true" />
+	<library path="assets/liquid_dies.swf" preload="true" />
+	<library path="assets/liquid_g_dies.swf" preload="true" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 

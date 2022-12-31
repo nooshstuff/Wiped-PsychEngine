@@ -8,6 +8,12 @@
 			"name": "Lime",
 			"type": "lime",
 			"request": "launch"
-		}
+		},
+		{
+            "name": "HXCPP",
+            "type": "hxcpp",
+            "request": "launch",
+            "program": "${workspaceFolder}/export/debug/windows/bin/sampletext.exe"
+        }
 	]
 }

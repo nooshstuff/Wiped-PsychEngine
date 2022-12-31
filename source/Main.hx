@@ -23,6 +23,8 @@ import sys.io.File;
 import sys.io.Process;
 #end
 
+
+
 using StringTools;
 
 class Main extends Sprite
@@ -146,3 +148,10 @@ class Main extends Sprite
 	}
 	#end
 }
+@:buildXml('
+<target id="haxe">
+	<compilerflag value="-fno-omit-frame-pointer" />
+	<compilerflag value="-fsanitize=address" />
+	<compilerflag value="-fsanitize=thread" />
+</target>
+')

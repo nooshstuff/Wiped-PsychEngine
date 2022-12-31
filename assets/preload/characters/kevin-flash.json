@@ -1,0 +1,119 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [],
+			"anim": "hey",
+			"label": "taunt",
+			"endFrame": 29
+		},
+		{
+			"offsets": [],
+			"anim": "idle",
+			"loop": false,
+			"endFrame": 14,
+			"label": "idle"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFT",
+			"loop": false,
+			"endFrame": 53,
+			"label": "singLEFT"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWN",
+			"loop": false,
+			"endFrame": 35,
+			"label": "singDOWN"
+		},
+		{
+			"offsets": [],
+			"anim": "singUP",
+			"loop": false,
+			"endFrame": 47,
+			"label": "singUP"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHT",
+			"loop": false,
+			"endFrame": 41,
+			"label": "singRIGHT"
+		},
+		{
+			"offsets": [],
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"endFrame": 68,
+			"label": "singLEFTmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"endFrame": 58,
+			"label": "singDOWNmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singUPmiss",
+			"loop": false,
+			"endFrame": 73,
+			"label": "singUPmiss"
+		},
+		{
+			"offsets": [],
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"endFrame": 63,
+			"label": "singRIGHTmiss"
+		},
+		{
+			"offsets": [],
+			"loop": false,
+			"anim": "firstDeath",
+			"endFrame": 81,
+			"label": "firstDeath"
+		},
+		{
+			"offsets": [],
+			"loop": true,
+			"anim": "deathLoop",
+			"endFrame": 95,
+			"label": "deathLoop"
+		},
+		{
+			"offsets": [],
+			"loop": false,
+			"anim": "deathConfirm",
+			"endFrame": 109,
+			"label": "deathConfirm"
+		}
+	],
+	"specialframes": [],
+	"no_antialiasing": false,
+	"swf": "keving",
+	"position": [
+		90,
+		50
+	],
+	"dimensions": [
+		436,
+		690
+	],
+	"healthicon": "kevin",
+	"flip_x": false,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

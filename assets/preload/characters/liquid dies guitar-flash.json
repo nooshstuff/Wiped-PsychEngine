@@ -1,0 +1,49 @@
+{
+	"animations": [
+		{
+			"offsets": [],
+			"loop": false,
+			"anim": "firstDeath",
+			"endFrame": 93,
+			"label": "firstDeath"
+		},
+		{
+			"offsets": [],
+			"loop": true,
+			"anim": "deathLoop",
+			"endFrame": 119,
+			"label": "deathLoop"
+		},
+		{
+			"offsets": [],
+			"loop": false,
+			"anim": "deathConfirm",
+			"endFrame": 164,
+			"label": "deathConfirm"
+		}
+	],
+	"specialframes": [],
+	"no_antialiasing": false,
+	"swf": "liquid_g_dies",
+	"position": [
+		-50,
+		-50
+	],
+	"dimensions": [
+		1537,
+		1137
+	],
+	"healthicon": "liquid",
+	"flip_x": false,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
