@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mkayIdle"
+		},
+		{
+			"offsets": [
+				18,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mkayLeft"
+		},
+		{
+			"offsets": [
+				-7,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mkayDown"
+		},
+		{
+			"offsets": [
+				3,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mkayUp"
+		},
+		{
+			"offsets": [
+				-31,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mkayRight"
+		},
+		{
+			"offsets": [
+				18,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "FUCKmkayLeft"
+		},
+		{
+			"offsets": [
+				-8,
+				-17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "FUCKmkayDown"
+		},
+		{
+			"offsets": [
+				8,
+				31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "FUCKmkayUp"
+		},
+		{
+			"offsets": [
+				-28,
+				19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "FUCKmkayRight"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-37,
+				-38
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "taunter",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/kook",
+	"position": [
+		90,
+		350
+	],
+	"healthicon": "kevin",
+	"flip_x": true,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,66 @@
+{
+	"song": {
+		"events": [
+			[
+				62637.3626373627,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.92"
+					],
+					[
+						"Camera Follow Pos",
+						"696.5",
+						"567"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"0.76"
+					],
+					[
+						"Play Animation",
+						"line",
+						"dad"
+					]
+				]
+			],
+			[
+				63296.7032967033,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Set Property",
+						"camZoomingDecay",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				115879.120879121,
+				[
+					[
+						"Camera Follow Pos",
+						"990",
+						"541"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			]
+		]
+	}
+}

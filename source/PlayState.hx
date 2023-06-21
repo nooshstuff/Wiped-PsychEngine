@@ -1,5 +1,17 @@
 package;
 
+import flx3D.FlixelLogo;
+import away3d.utils.Cast;
+import away3d.library.assets.Asset3DType;
+import away3d.events.Asset3DEvent;
+import away3d.loaders.parsers.OBJParser;
+import away3d.loaders.Loader3D;
+import away3d.materials.TextureMaterial;
+import away3d.materials.lightpickers.StaticLightPicker;
+import away3d.entities.Mesh;
+import away3d.loaders.misc.AssetLoaderContext;
+import away3d.lights.DirectionalLight;
+import flx3D.FlxView3D;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -75,6 +87,8 @@ import sys.io.File;
 //import vlc.MP4Handler;
 import hxcodec.VideoHandler as MP4Handler;
 #end
+
+import away3d.Away3D;
 
 using StringTools;
 
@@ -268,7 +282,12 @@ class PlayState extends MusicBeatState
 	public static var lastCombo:FlxSprite;
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
-
+	
+	//3DCODE
+	public var threeD:FlixelLogo = null;
+	public function dddCheck():Bool {
+		return flx3D.Flx3DUtil.is3DAvailable();
+	}
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -459,6 +478,11 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.loopSoundName = 'gameOver-pixel';
 				GameOverSubstate.endSoundName = 'gameOverEnd-pixel';
 				GameOverSubstate.characterName = 'bf-pixel-dead';*/
+			case 'attraction':
+				//3DCODE
+				threeD = new FlixelLogo(640, 160);
+				add(threeD);
+				gfGroup.visible = false;
 		}
 
 		if(isPixelStage) {
@@ -1916,8 +1940,14 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
 
+	var meshs:Array<Mesh> = [];
 	override public function update(elapsed:Float)
 	{
+		for (mesh in meshs)
+		{
+			if (mesh != null)
+				mesh.rotationY += 10 * elapsed;
+		}
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
@@ -3546,6 +3576,8 @@ class PlayState extends MusicBeatState
 		}
 		FlxAnimationController.globalSpeed = 1;
 		FlxG.sound.music.pitch = 1;
+		//3DCODE
+		if (threeD != null) { threeD.destroy(); }
 		super.destroy();
 	}
 

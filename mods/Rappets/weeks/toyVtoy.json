@@ -1,0 +1,32 @@
+{
+	"storyName": "rappets",
+	"difficulties": "Normal, Hard",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"fazballs",
+			"kevin",
+			[
+				160,
+				133,
+				0
+			]
+		]
+	],
+	"weekCharacters": [
+		"kook",
+		"kook",
+		"kook"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "rappets"
+}

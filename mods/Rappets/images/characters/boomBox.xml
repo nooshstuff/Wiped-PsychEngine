@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="boomBox.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="speakr0000" x="0" y="0" width="539" height="240"/>
+	<SubTexture name="speakr0001" x="542" y="0" width="539" height="240"/>
+	<SubTexture name="speakr0002" x="1084" y="0" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0003" x="1084" y="0" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0004" x="0" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0005" x="0" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0006" x="1084" y="0" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0007" x="1084" y="0" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0008" x="532" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0009" x="532" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0010" x="1064" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0011" x="1064" y="243" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0012" x="0" y="484" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+	<SubTexture name="speakr0013" x="0" y="484" width="529" height="238" frameX="-6" frameY="-1" frameWidth="539" frameHeight="240"/>
+</TextureAtlas>

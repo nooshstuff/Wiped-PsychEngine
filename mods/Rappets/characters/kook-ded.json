@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				76,
+				35
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "die"
+		},
+		{
+			"offsets": [
+				23,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "dedlooooop"
+		},
+		{
+			"offsets": [
+				23,
+				-13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "retry"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/kook",
+	"position": [
+		135,
+		325
+	],
+	"healthicon": "kevin",
+	"flip_x": true,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

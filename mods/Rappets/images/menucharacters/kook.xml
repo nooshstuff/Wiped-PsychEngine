@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kook.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mkayIdle0000" x="0" y="0" width="249" height="415" frameX="-13" frameY="-16" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0001" x="0" y="0" width="249" height="415" frameX="-13" frameY="-16" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0002" x="252" y="0" width="261" height="412" frameX="-4" frameY="-19" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0003" x="252" y="0" width="261" height="412" frameX="-4" frameY="-19" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0004" x="516" y="0" width="266" height="416" frameX="0" frameY="-15" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0005" x="516" y="0" width="266" height="416" frameX="0" frameY="-15" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0006" x="785" y="0" width="262" height="424" frameX="-6" frameY="-7" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0007" x="785" y="0" width="262" height="424" frameX="-6" frameY="-7" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0008" x="1050" y="0" width="258" height="429" frameX="-10" frameY="-2" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0009" x="1050" y="0" width="258" height="429" frameX="-10" frameY="-2" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0010" x="1311" y="0" width="258" height="431" frameX="-10" frameY="0" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0011" x="1311" y="0" width="258" height="431" frameX="-10" frameY="0" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0012" x="1311" y="0" width="258" height="431" frameX="-10" frameY="0" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="mkayIdle0013" x="1311" y="0" width="258" height="431" frameX="-10" frameY="0" frameWidth="268" frameHeight="431"/>
+	<SubTexture name="taunter0000" x="1572" y="0" width="244" height="386" frameX="0" frameY="-5" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0001" x="1572" y="0" width="244" height="386" frameX="0" frameY="-5" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0002" x="0" y="434" width="243" height="391" frameX="-1" frameY="-1" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0003" x="0" y="434" width="243" height="391" frameX="-1" frameY="-1" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0004" x="246" y="434" width="242" height="392" frameX="-1" frameY="0" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0005" x="246" y="434" width="242" height="392" frameX="-1" frameY="0" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0006" x="1572" y="0" width="244" height="386" frameX="0" frameY="-5" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0007" x="1572" y="0" width="244" height="386" frameX="0" frameY="-5" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0008" x="0" y="434" width="243" height="391" frameX="-1" frameY="-1" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0009" x="0" y="434" width="243" height="391" frameX="-1" frameY="-1" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0010" x="246" y="434" width="242" height="392" frameX="-1" frameY="0" frameWidth="244" frameHeight="392"/>
+	<SubTexture name="taunter0011" x="246" y="434" width="242" height="392" frameX="-1" frameY="0" frameWidth="244" frameHeight="392"/>
+</TextureAtlas>

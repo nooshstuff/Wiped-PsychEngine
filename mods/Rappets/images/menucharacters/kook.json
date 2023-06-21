@@ -1,0 +1,11 @@
+{
+	"idle_anim": "mkayIdle",
+	"image": "kook",
+	"position": [
+		20,
+		0
+	],
+	"flipX": true,
+	"scale": 0.6,
+	"confirm_anim": "taunter"
+}

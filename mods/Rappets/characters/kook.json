@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mkayIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				17,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "mkayLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49,
+				-40
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "mkayDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				14
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mkayUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				46,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "mkayRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				16,
+				-38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "taunter"
+		},
+		{
+			"offsets": [
+				30,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "line",
+			"loop": false,
+			"name": "mkayBizAyy"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/kook",
+	"position": [
+		120,
+		340
+	],
+	"healthicon": "kevin",
+	"flip_x": true,
+	"healthbar_colors": [
+		239,
+		176,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
